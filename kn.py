@@ -1,0 +1,13 @@
+import KNN
+group,labels=KNN.createDataSet()
+print(group)
+print(labels)
+datingDataMat,datingLabels=KNN.file2matrix('datingTestSet2.txt')
+print(datingDataMat)
+print(datingLabels)
+normMat,ranges,minVals=KNN.autoNorm(datingDataMat)
+print(normMat)
+print(ranges)
+print(minVals)
+KNN.datingClassTest()
+KNN.classifyPerson()
